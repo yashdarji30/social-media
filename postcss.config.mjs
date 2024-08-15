@@ -1,10 +1,8 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  experimental: {
-    staleTimes: {
-      dynamic: 30,
-    },
+/** @type {import('postcss-load-config').Config} */
+const config = {
+  plugins: {
+    tailwindcss: {},
   },
 };
 
-export default nextConfig;
+export default config;
