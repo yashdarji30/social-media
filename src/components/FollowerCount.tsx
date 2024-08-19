@@ -5,20 +5,20 @@ import { FollowerInfo } from "@/lib/types";
 import { formatNumber } from "@/lib/utils";
 
 interface FollowerCountProps {
-    userId: string;
-    initailState: FollowerInfo;
+  userId: string;
+  initialState: FollowerInfo;
 }
 
 export default function FollowerCount({
-    userId,
-    initailState,
+  userId,
+  initialState,
 }: FollowerCountProps) {
-    const {data} = useFollowerInfo(userId, initailState);
+  const { data } = useFollowerInfo(userId, initialState);
 
-    return(
-        <span>
-            Followers:{" "}
-            <span className="font-semibold">{formatNumber(data.followers)}</span>
-        </span>
-    )
+  return (
+    <span>
+      Followers:{" "}
+      <span className="font-semibold">{formatNumber(data.followers)}</span>
+    </span>
+  );
 }
