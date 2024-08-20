@@ -13,6 +13,7 @@ import { notFound } from "next/navigation";
 import { cache } from "react";
 import UserPosts from "./UserPosts";
 import Linkify from "@/components/Linkify";
+import EditProfileButton from "./EditProfileButton";
 
 interface PageProps {
   params: { username: string };
@@ -111,11 +112,11 @@ async function UserProfile({ user, loggedInUserId }: UserProfileProps) {
                 {formatNumber(user._count.posts)}
               </span>
             </span>
-            <FollowerCount userId={user.id} initailState={followerInfo} />
+            <FollowerCount userId={user.id} initialState={followerInfo} />
           </div>
         </div>
         {user.id === loggedInUserId ? (
-          <Button>Edit profile</Button>
+          <EditProfileButton user={user} />
         ) : (
           <FollowButton userId={user.id} initialState={followerInfo} />
         )}
