@@ -32,4 +32,4 @@ export async function updateUserProfile(values: UpdateUserProfileValues) {
   });
 
   return updatedUser;
-}
+} 

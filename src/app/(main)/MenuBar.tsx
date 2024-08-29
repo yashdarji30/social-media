@@ -1,11 +1,11 @@
 import { validateRequest } from "@/auth";
 import { Button } from "@/components/ui/button";
 import prisma from "@/lib/prisma";
-import { Bell, Bookmark, Home, Mail } from "lucide-react";
-import Link from "next/link";
-import NotificationsButton from "./NotificationsButton";
-import MessagesButton from "./MessagesButton";
 import streamServerClient from "@/lib/stream";
+import { Bookmark, Home } from "lucide-react";
+import Link from "next/link";
+import MessagesButton from "./MessagesButton";
+import NotificationsButton from "./NotificationsButton";
 
 interface MenuBarProps {
   className?: string;
@@ -25,6 +25,7 @@ export default async function MenuBar({ className }: MenuBarProps) {
     }),
     (await streamServerClient.getUnreadCount(user.id)).total_unread_count,
   ]);
+
   return (
     <div className={className}>
       <Button
