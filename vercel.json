@@ -1,8 +1,8 @@
 {
-    "corns": [
-        {
-            "path": "api/clear-uploads",
-            "schedule": "0 7 * * *"
-        }
+    "crons": [
+      {
+        "path": "/api/clear-uploads",
+        "schedule": "0 8 * * *"
+      }
     ]
-}
+  }
