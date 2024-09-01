@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import LoginForm from "./LoginForm";
 import GoogleSignInButton from "./GoogleSignInButton";
+import GithubSignInButton from "./github/GithubSignInButton";
 
 export const metadata: Metadata = {
   title: "Login",
@@ -21,6 +22,11 @@ export default function Page() {
             <div className="flex items-center gap-3">
               <div className="h-px flex-1 bg-muted" />
                 <span>OR</span>
+              <div className="h-px flex-1 bg-muted"/>
+            </div>
+            <GithubSignInButton/>
+            <div className="flex items-center gap-3">
+              <div className="h-px flex-1 bg-muted" />
               <div className="h-px flex-1 bg-muted"/>
             </div>
             <LoginForm />
