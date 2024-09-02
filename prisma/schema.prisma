@@ -22,7 +22,6 @@ model User {
   email                 String?        @unique
   passwordHash          String?
   googleId              String?        @unique
-  githubId              String?         @unique
   avatarUrl             String?
   bio                   String?
   sessions              Session[]
