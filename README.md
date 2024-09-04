@@ -37,8 +37,86 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 # Dependencies
 
-```
+```bash
 npm i lucia @lucia-auth/adapter-prisma prisma @prisma/client @tanstack/react-query @tanstack/react-query-devtools @tiptap/react @tiptap/starter-kit @tiptap/extension-placeholder @tiptap/pm uploadthing @uploadthing/react arctic date-fns ky next-themes react-cropper react-image-file-resizer react-intersection-observer react-linkify-it stream-chat stream-chat-react --legacy-peer-deps
 
-
 ```
+** Shadcn components **
+```bash
+npx --legacy-peer-deps shadcn-ui@latest add button dialog dropdown-menu form input label skeleton tabs textarea toast tooltip
+```
+
+** Prettier lagecy-peer-deps **
+
+```bash
+npm i -D prettier eslint-config-prettier prettier-plugin-tailwindcss --legacy-peer-deps
+```
+
+# .env
+```
+#vercel postgres database configure
+
+POSTGRES_URL=""
+POSTGRES_PRISMA_URL=""
+POSTGRES_URL_NO_SSL=""
+POSTGRES_URL_NON_POOLING=""
+POSTGRES_USER=""
+POSTGRES_HOST=""
+POSTGRES_PASSWORD=""
+POSTGRES_DATABASE=""
+
+#googleOAuth
+GOOGLE_CLIENT_ID=""
+GOOGLE_CLIENT_SECRET=""
+
+#githubOAuth
+
+# GITHUB_CLIENT_ID=""
+# GITHUB_CLIENT_SECRET=""
+
+#uploadthing
+UPLOADTHING_SECRET=""
+NEXT_PUBLIC_UPLOADTHING_APP_ID=""
+
+#Stream
+
+NEXT_PUBLIC_STREAM_KEY=""
+STREAM_SECRET=""
+
+#other
+CRON_SECRET=""
+NEXT_PUBLIC_BASE_URL="http://localhost:3000"
+```
+
+## <a name="features">🔋 Features and Technology</a>
+
+- Next.js 15
+- Server actions and server components
+- TanStack React Query
+- Optimistic updates
+- Infinite scrolling feeds
+- File uploads with drag & drop and copy-paste support (UploadThing)
+- Like system
+- Follow system
+- Comment system
+- Notification system
+- DM system (powered by Stream)
+- Bookmarks
+- Lucia authentication (username/password & Google OAuth2)
+- Postgres DB with Prisma ORM
+- Hashtags & mentions
+- Full-text search
+- Advanced caching & revalidation
+- Mobile-responsive layout with Tailwind CSS & Shadcn UI components
+- Dark theme, light theme, and system theme
+- Real-time form validation with React Hook Form & Zod
+- TipTap editor
+- Deploy on Vercel & set up cron job
+- IDE setup with Prettier & plugins
+
+## Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
